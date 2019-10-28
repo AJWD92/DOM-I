@@ -89,3 +89,18 @@ contactInfo[2].textContent = siteContent['contact']['email'];
 
 const footerP = document.querySelector('footer');
 footerP.textContent = siteContent['footer']['copyright'];
+
+const partnerForm = document.createElement('a');
+const review = document.createElement('a');
+
+partnerForm.textContent = 'Partners';
+review.textContent = 'Reviews';
+
+const newNav = document.querySelector('nav');
+
+newNav.append(partnerForm);
+newNav.prepend(review);
+
+document.querySelectorAll('nav a').forEach((link) => {
+  link.style.color = 'green';
+});
